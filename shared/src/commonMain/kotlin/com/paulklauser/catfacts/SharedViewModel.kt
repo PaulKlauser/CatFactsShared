@@ -19,7 +19,7 @@ class SharedViewModel : ViewModel() {
     fun fetchCatFact() {
         viewModelScope.launch {
             _uiState.update { UiState.Loading }
-            delay(2.seconds)
+            delay(1.seconds)
             _uiState.update { UiState.Success(service.fetchCatFact()) }
         }
     }
